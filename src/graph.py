@@ -1,12 +1,12 @@
 """Implementação de uma estrutura de grafo."""
 
-import sys
+# import sys
 
 
 def read_graph(filename: str):
     """Le uma estrutura de grafo de um arquivo e retorna a estrutura."""
     graph = {}
-    with open(filename, "rt") as input_file:
+    with open(filename, "rt", encoding="utf-8") as input_file:
         vertex_count = int(input_file.readline().strip())  # File needs to start with coords quantity number
 
         for i in range(vertex_count):  # Counts every coord
@@ -38,4 +38,3 @@ def read_graph(filename: str):
 #     8: {'coord': (-30.010342, -51.146085), 'edges': [(7, 20.481000375464983), (9, 12.941289400664326)]},
 #     9: {'coord': (-30.010351, -51.146219), 'edges': [(0, 370.84011298540076), (2, 278.0130930702961), (5, 150.92654043736871), (6, 69.64300121602454), (8, 12.941289400664326)]}
 # }
-
