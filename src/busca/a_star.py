@@ -3,14 +3,14 @@
 
 def a_star(graph, start: int, goal: int) -> (int, float, [int]):
     """Busca em graph, um caminho entre start e goal usando A*."""
-    open_set = PriorityQueue()  # Priority queue to store nodes to be explored
-    open_set.put((0, start))  # Add the initial node to the priority queue
-    best_cost = {vertex: float('inf') for vertex in graph}  # Dictionary to store the best cost to each node
-    best_cost[start] = 0  # The best cost for the initial node is 0
-    came_from = {}  # Dictionary to store the path back to reconstruct the path
+    open_set = queue()  # Priority queue to store nodes to be explored
+    open_set.put((0, start))
+    best_cost = {vertex: float('inf') for vertex in graph}
+    best_cost[start] = 0
+    came_from = {}
 
     while not open_set.empty():
-        _, current = open_set.get()  # Get the node with the lowest estimated cost from the priority queue
+        _, current = open_set.get()
 
         # If the current node is the goal, reconstruct the path and return
         if current == goal:
@@ -19,7 +19,7 @@ def a_star(graph, start: int, goal: int) -> (int, float, [int]):
                 current = came_from[current]
                 path.append(current)
             path.reverse()
-            return len(path), best_cost[goal], path  # Return the path length, path cost, and the path itself
+            return len(path), best_cost[goal], path
 
         # Explore neighbors of the current node
         for neighbor, cost in graph[current]['edges']:
@@ -30,4 +30,4 @@ def a_star(graph, start: int, goal: int) -> (int, float, [int]):
                 open_set.put((total_cost, neighbor))  # Add the neighbor to the priority queue
                 came_from[neighbor] = current  # Update the parent node of the neighbor
 
-    return 0, float('inf'), []  # Return if no path is found
+    return 0, float('inf'), []
