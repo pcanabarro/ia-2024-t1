@@ -1,13 +1,14 @@
 """Implementação da busca em profundidade."""
 
 from queue import deque as Queue
-
-from util import reverse_path
-
 from collections import deque
+from util import reverse_path
 
 def bfs(graph, start: int, goal: int) -> (int, float, [int]):
     """Busca um caminho entre start e goal usando busca em largura."""
+    if goal or start not in graph:
+        raise ValueError("Start or Goal doesn't exist in this graph")
+
     visited = set()
     queue = deque([(start, [start], 0.0)])
 
@@ -25,4 +26,4 @@ def bfs(graph, start: int, goal: int) -> (int, float, [int]):
                     total_cost = cost + edge_cost
                     queue.append((neighbor, path + [neighbor], total_cost))
 
-    return 0, float('inf'), []
+    raise ValueError("Goal node is not reachable from the start node")
