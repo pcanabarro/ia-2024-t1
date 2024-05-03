@@ -9,27 +9,19 @@ def dfs(graph, start: int, goal: int) -> (int, float, [int]):
         raise ValueError("Goal node does not exist in the graph")
 
     visited = set()
-    stack = [(start, [start])]
+    stack = [(start, [start], 0.0)]
 
     while stack:
-        (node, path) = stack.pop()
+        current_node, path, cost = stack.pop()
 
-        # If we reach the goal node, return the path
-        if node == goal:
-            total_distance = sum(graph[path[i]]['edges'][path[i + 1]][1] for i in range(len(path) - 1))
-            return len(path) - 1, total_distance, path
+        if current_node == goal:
+            return len(path), float(len(path) -1), path
 
-        # If the node has not been visited
-        if node not in visited:
-            print("node", node)
-            print("graph espec", graph[node]['edges'])
+        if current_node not in visited:
+            visited.add(current_node)
 
-            visited.add(node)
-
-            # Explore neighbors of the current node
-            for neighbor in graph[node]['edges']:
-                print('ue', neighbor)
+            for neighbor in graph[current_node]['edges']:
                 if neighbor[0] not in visited:
-                    stack.append((neighbor[0], path + [neighbor[0]]))
+                    stack.append((neighbor[0], path + [neighbor[0]], 1))
 
     raise ValueError("Goal node is not reachable from the start node")
