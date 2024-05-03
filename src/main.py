@@ -1,7 +1,7 @@
 """Utilize este arquivo para depurar seus algoritmos."""
 
 from graph import read_graph
-from busca import bfs
+from busca import a_star, bfs, branch_and_bound, dfs, dijkstra
 
 if __name__ == "__main__":
     mini_graph = read_graph("../mapas/mini_map.txt")
@@ -9,6 +9,14 @@ if __name__ == "__main__":
     # small_graph = read_graph("../mapas/small_map.txt")
     # medium_graph = read_graph("../mapas/medium_map.txt")
     # full_graph = read_graph("../mapas/full_map.txt")
-    vextex_visited, cost, path = bfs(mini_graph, 0, 8)
-    # vertices_avaliados, custo, caminho = a_star(grafo, 1, 100)
+
+    START_VERTEX = 1
+    GOAL_VERTEX = 4
+    path_length, cost, shortest_path = a_star(mini_graph, START_VERTEX, GOAL_VERTEX)
+    print("Comprimento do caminho mais curto", START_VERTEX, "para", GOAL_VERTEX, ":", path_length)
+    print("Custo do caminho mais curto:", cost)
+    print("Caminho mais curto:", shortest_path)
+
+
+    # vertices_avaliados, custo, caminho = bfs(grafo, 0, 9)
     # print(vertices_avaliados, custo, caminho)
