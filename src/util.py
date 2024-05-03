@@ -24,3 +24,5 @@ def haversine(lat1, lon1, lat2, lon2):
 #
 # Não altere este comentário e adicione suas funções ao final do arquivo.
 #
+def reverse_path():
+    return None

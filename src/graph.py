@@ -26,7 +26,6 @@ def read_graph(filename: str):
 
     return graph
 
-# TODO: REMOVE THIS COMMENT - How mini map return dict should look like
 # graph = {
 #     0: {'coord': (-30.008646, -51.142909), 'edges': [(2, 93.16199226823055), (9, 370.84011298540076)]},
 #     1: {'coord': (-30.00894, -51.143344), 'edges': [(2, 40.19992641024175), (0, 53.13321306005169)]},
