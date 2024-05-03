@@ -12,11 +12,12 @@ if __name__ == "__main__":
     # full_graph = read_graph("../mapas/full_map.txt")
 
     START_VERTEX = 1
-    GOAL_VERTEX = 5
+    GOAL_VERTEX = 8
 
     try:
         #  path_length, cost, shortest_path = a_star(mini_graph, START_VERTEX, GOAL_VERTEX)  # A* path
         path_length, cost, shortest_path = bfs(mini_graph, START_VERTEX, GOAL_VERTEX)  # BFS path
+        # path_length, cost, shortest_path = dfs(mini_graph, START_VERTEX, GOAL_VERTEX)  # DFS path
 
         print("Comprimento do caminho mais curto", START_VERTEX, "para", GOAL_VERTEX, ":", path_length)
         print("Custo do caminho mais curto:", cost)
