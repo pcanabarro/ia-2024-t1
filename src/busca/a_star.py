@@ -1,7 +1,6 @@
 """Implementação do algoritmo A*."""
 import heapq
 
-
 def heuristic(node, goal, graph):
    # return graph[node]['edges'][goal][1]
     for edge in graph[node]['edges']:
