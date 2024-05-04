@@ -9,14 +9,14 @@ def read_graph(filename: str):
     with open(filename, "rt", encoding="utf-8") as input_file:
         vertex_count = int(input_file.readline().strip())
 
-        for i in range(vertex_count):  # Counts every coord
+        for _ in range(vertex_count):  # Counts every vertex
             index, latitude, longitude = input_file.readline().strip().split()
 
             graph[int(index)] = {'vertex': (float(latitude), float(longitude)), 'edges': []}
 
         edge_count = int(input_file.readline().strip())
 
-        for j in range(edge_count):  # Counts every possibility
+        for _ in range(edge_count):  # Counts every possibility
             from_vertex, to_vertex, cost = (
                 input_file.readline().strip().split()
             )
