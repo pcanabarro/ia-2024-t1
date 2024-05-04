@@ -2,7 +2,7 @@
 import heapq
 
 def heuristic(node, goal, graph):
-   # return graph[node]['edges'][goal][1]
+    """Busca por heuristica."""
     for edge in graph[node]['edges']:
         if edge[0] == goal:
             return edge[1]

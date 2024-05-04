@@ -20,7 +20,7 @@ def bfs(graph, start: int, goal: int) -> (int, float, [int]):
         if current_node not in visited:
             visited.add(current_node)
 
-            for neighbor, edge_cost in graph[current_node]['edges']:
+            for neighbor in graph[current_node]['edges']:
                 if neighbor not in visited:
                     total_cost = cost + 1
                     queue.append((neighbor, path + [neighbor], total_cost))
