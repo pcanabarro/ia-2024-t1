@@ -22,7 +22,7 @@ if __name__ == "__main__":
         # DFS path
         # path_length, cost, shortest_path = dfs(mini_graph, START_VERTEX, GOAL_VERTEX)
 
-        print("Comprimento do caminho mais curto", START_VERTEX, "para", GOAL_VERTEX, ":", path_length)
+        print("Comprimento caminho mais curto", START_VERTEX, "para", GOAL_VERTEX, ":", path_length)
         print("Custo do caminho mais curto:", cost)
         print("Caminho mais curto:", shortest_path)
     finally:
