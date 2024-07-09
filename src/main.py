@@ -16,8 +16,7 @@ if __name__ == "__main__":
 
     try:
         # A* path
-        path_length, cost, shortest_path = a_star(
-            mini_graph, START_VERTEX, GOAL_VERTEX)
+        path_length, cost, shortest_path = a_star(mini_graph, START_VERTEX, GOAL_VERTEX)
         # BFS path
         # path_length, cost, shortest_path = bfs(
         #     mini_graph, START_VERTEX, GOAL_VERTEX)

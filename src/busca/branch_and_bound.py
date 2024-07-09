@@ -1,7 +1,10 @@
 """Implementação do algoritmo 'branch and bound'."""
 from collections import deque
-from ..util import get_neighbors
 
+
+def get_neighbors(graph, node):
+    """Return neighbors from a node."""
+    return graph.get(node, [])
 
 def branch_and_bound(graph, start: int, goal: int) -> (int, float, [int]):
     """Busca um caminho entre start e goal usando Branch and Bound."""

@@ -1,8 +1,13 @@
 """Implementação do algoritmo A*."""
 import heapq
 
-from ..util import heuristic
 
+def heuristic(node, goal, graph):
+    """Busca por heuristica."""
+    for edge in graph[node]['edges']:
+        if edge[0] == goal:
+            return edge[1]
+    return float('inf')
 
 def a_star(graph, start: int, goal: int) -> (int, float, [int]):
     """Busca em graph, um caminho entre start e goal usando A*."""
