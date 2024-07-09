@@ -11,25 +11,24 @@ if __name__ == "__main__":
     medium_graph = read_graph("../mapas/medium_map.txt")
     full_graph = read_graph("../mapas/full_map.txt")
 
-    START_VERTEX = 0
+    START_VERTEX = 1
     GOAL_VERTEX = 2
 
     try:
         # A* path
-        path_length, cost, shortest_path = a_star(
-            mini_graph, START_VERTEX, GOAL_VERTEX)
+        # path_length, cost, shortest_path = a_star(
+            # mini_graph, START_VERTEX, GOAL_VERTEX)
         # BFS path
-        path_length, cost, shortest_path = bfs(
-            mini_graph, START_VERTEX, GOAL_VERTEX)
+        # path_length, cost, shortest_path = bfs(
+            # mini_graph, START_VERTEX, GOAL_VERTEX)
         # DFS path
-        path_length, cost, shortest_path = dfs(
-            mini_graph, START_VERTEX, GOAL_VERTEX)
+        # path_length, cost, shortest_path = dfs(
+            # mini_graph, START_VERTEX, GOAL_VERTEX)
         # branch_and_bound path
-        path_length, cost, shortest_path = branch_and_bound(
-            mini_graph, START_VERTEX, GOAL_VERTEX)
+        path_length, cost, shortest_path = branch_and_bound(mini_graph, START_VERTEX, GOAL_VERTEX)
         # dijkstra path
-        path_length, cost, shortest_path = dijkstra(
-            mini_graph, START_VERTEX, GOAL_VERTEX)
+        # path_length, cost, shortest_path = dijkstra(
+        #     mini_graph, START_VERTEX, GOAL_VERTEX)
 
         print("Comprimento caminho mais curto",
               START_VERTEX, "para", GOAL_VERTEX, ":", path_length)
