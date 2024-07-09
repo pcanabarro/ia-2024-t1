@@ -2,6 +2,7 @@
 from collections import deque
 from ..util import get_neighbors
 
+
 def branch_and_bound(graph, start: int, goal: int) -> (int, float, [int]):
     """Busca um caminho entre start e goal usando Branch and Bound."""
     visited = set()
@@ -9,7 +10,8 @@ def branch_and_bound(graph, start: int, goal: int) -> (int, float, [int]):
     best = None
 
     while queue:
-        queue = deque(sorted(queue, key=lambda x: x[1]))  # Ordenar pelo custo acumulado (x[1])
+        # Ordenar pelo custo acumulado (x[1])
+        queue = deque(sorted(queue, key=lambda x: x[1]))
         cost, _, current_path = queue.popleft()
         node = current_path[-1]
 

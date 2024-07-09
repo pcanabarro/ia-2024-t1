@@ -12,7 +12,8 @@ def read_graph(filename: str):
         for _ in range(vertex_count):  # Counts every vertex
             index, latitude, longitude = input_file.readline().strip().split()
 
-            graph[int(index)] = {'vertex': (float(latitude), float(longitude)), 'edges': []}
+            graph[int(index)] = {
+                'vertex': (float(latitude), float(longitude)), 'edges': []}
 
         edge_count = int(input_file.readline().strip())
 
