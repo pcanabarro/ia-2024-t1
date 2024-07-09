@@ -7,6 +7,7 @@ def get_neighbors(graph, node):
     """Return neighbors from a node."""
     return graph.get(node, [])
 
+
 def dijkstra(graph, start: int, goal: int) -> (int, float, [int]):
     """Busca em graph, um caminho entre start e goal usando Dijkstra."""
     queue = [(0, start, [start])]
