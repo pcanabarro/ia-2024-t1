@@ -22,7 +22,8 @@ def read_graph(filename: str):
                 input_file.readline().strip().split()
             )
 
-            from_vertex, to_vertex, cost = int(from_vertex), int(to_vertex), float(cost)
+            from_vertex, to_vertex, cost = int(
+                from_vertex), int(to_vertex), float(cost)
             graph[from_vertex]['edges'].append((to_vertex, cost))
 
     return graph
