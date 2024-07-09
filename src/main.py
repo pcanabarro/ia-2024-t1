@@ -19,17 +19,17 @@ if __name__ == "__main__":
         path_length, cost, shortest_path = a_star(
             mini_graph, START_VERTEX, GOAL_VERTEX)
         # BFS path
-        path_length, cost, shortest_path = bfs(
-            mini_graph, START_VERTEX, GOAL_VERTEX)
+        # path_length, cost, shortest_path = bfs(
+        #     mini_graph, START_VERTEX, GOAL_VERTEX)
         # DFS path
-        path_length, cost, shortest_path = dfs(
-            mini_graph, START_VERTEX, GOAL_VERTEX)
+        # path_length, cost, shortest_path = dfs(
+        #     mini_graph, START_VERTEX, GOAL_VERTEX)
         # branch_and_bound path
-        path_length, cost, shortest_path = branch_and_bound(
-            mini_graph, START_VERTEX, GOAL_VERTEX)
+        # path_length, cost, shortest_path = branch_and_bound(
+        #     mini_graph, START_VERTEX, GOAL_VERTEX)
         # dijkstra path
-        path_length, cost, shortest_path = dijkstra(
-            mini_graph, START_VERTEX, GOAL_VERTEX)
+        # path_length, cost, shortest_path = dijkstra(
+        #     mini_graph, START_VERTEX, GOAL_VERTEX)
 
         print("Comprimento caminho mais curto",
               START_VERTEX, "para", GOAL_VERTEX, ":", path_length)
