@@ -15,7 +15,7 @@ def dfs(graph, start: int, goal: int) -> (int, float, [int]):
         current_node, path = stack.pop()
 
         if current_node == goal:
-            return len(path), float(len(path) -1), path
+            return len(path), float(len(path) - 1), path
 
         if current_node not in visited:
             visited.add(current_node)

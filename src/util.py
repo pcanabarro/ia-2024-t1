@@ -28,9 +28,11 @@ def reverse_path():
     """reverse_path."""
     return None
 
+
 def get_neighbors(graph, node):
     """Return neighbors from a node."""
     return graph.get(node, [])
+
 
 def heuristic(node, goal, graph):
     """Busca por heuristica."""
