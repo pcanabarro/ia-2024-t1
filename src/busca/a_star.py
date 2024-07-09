@@ -1,6 +1,4 @@
 """Implementação do algoritmo A*."""
-import heapq
-
 from ..util import heuristic
 
 
