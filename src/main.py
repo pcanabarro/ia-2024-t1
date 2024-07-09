@@ -11,8 +11,8 @@ if __name__ == "__main__":
     medium_graph = read_graph("../mapas/medium_map.txt")
     full_graph = read_graph("../mapas/full_map.txt")
 
-    START_VERTEX = 1
-    GOAL_VERTEX = 2
+    START_VERTEX = 0
+    GOAL_VERTEX = 9
 
     try:
         # A* path
