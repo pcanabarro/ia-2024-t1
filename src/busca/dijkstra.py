@@ -12,7 +12,7 @@ def dijkstra(graph, start: int, goal: int) -> (int, float, [int]):
     """Busca em graph, um caminho entre start e goal usando Dijkstra."""
     queue = [(0, start, [start])]
     visited = set()
-    best = ()
+    best = (None, None, None)
 
     while queue:
         cost, node, path = heappop(queue)

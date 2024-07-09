@@ -11,7 +11,7 @@ def branch_and_bound(graph, start: int, goal: int) -> (int, float, [int]):
     """Busca um caminho entre start e goal usando Branch and Bound."""
     visited = set()
     queue = deque([(0, 0, [start])])
-    best = None
+    best = (None, None, None)
 
     while queue:
         # Ordenar pelo custo acumulado (x[1])
