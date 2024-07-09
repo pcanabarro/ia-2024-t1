@@ -27,3 +27,14 @@ def haversine(lat1, lon1, lat2, lon2):
 def reverse_path():
     """reverse_path."""
     return None
+
+def get_neighbors(graph, node):
+    """Return neighbors from a node."""
+    return graph.get(node, [])
+
+def heuristic(node, goal, graph):
+    """Busca por heuristica."""
+    for edge in graph[node]['edges']:
+        if edge[0] == goal:
+            return edge[1]
+    return float('inf')
