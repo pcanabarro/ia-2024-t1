@@ -1,12 +1,8 @@
 """Implementação do algoritmo A*."""
 import heapq
 
-def heuristic(node, goal, graph):
-    """Busca por heuristica."""
-    for edge in graph[node]['edges']:
-        if edge[0] == goal:
-            return edge[1]
-    return float('inf')
+from ..util import heuristic
+
 
 def a_star(graph, start: int, goal: int) -> (int, float, [int]):
     """Busca em graph, um caminho entre start e goal usando A*."""
@@ -24,6 +20,7 @@ def a_star(graph, start: int, goal: int) -> (int, float, [int]):
     while open_list:
         current_f_cost, current_node = heapq.heappop(open_list) # smaller coaster of list
 
+        print("current_f_cost: ", current_f_cost)
         if current_node == goal:
             path = [] # remake the path
             while current_node in came_from:
